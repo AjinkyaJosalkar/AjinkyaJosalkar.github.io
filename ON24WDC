@@ -1,0 +1,74 @@
+Welcome!
+-----Below are the details regarding ON24 WDC-----
+
+ON24 API endpoints require client ID in the request URL, Access Token Key and Access Token Secret in the request headers.
+You can view/create your respective access tokens in ON24 API Dashboard console. refer: https://on24-prod.mindtouch.us/ON24_Connect/DataIntegration/ON24_REST_API
+
+You can put your respective Client ID, Access Token Key and Access Token secret in the connector landing html page in the text boxes provided 
+and click on 'Get ON24 Data!' This initiates the connection. Use Chromium to debug any issues while making a connection and data load.
+
+Steps to use this WDC in Tableau Desktop:
+
+1. Open Tableau Desktop>Connect to data>Web Data Connector
+2. Enter the URL:
+3. Enter Client ID, Access Token Key and Access Token Secret and click on 'Get ON24 Data!' button
+4. The tables Event, Attendee, Registrant and Survey would be displayed in the left side pane. You can pull any/all tables and model
+5. You can refresh individual table data using 'Update Now' or simply use 'Refresh All Extracts' option from 'Data' menu
+6. Based on the volume of data, WDC would execute requests and load the data into Tableau which can be used as an extract
+7. Data can be refreshed anytime using Update now option on individual table or Refresh all extracts option
+
+Tables available with this WDC:
+There are 4 tables which can be fetched using this WDC.
+A. Events
+B. Registrant
+C. Attendee
+D. Survey
+
+A. Events
+ID	               TYPE
+eventid	          string	
+description	      string
+isactive	        string	
+eventtype	        string	
+contenttype	      string	
+createtimestamp	  string
+livestart	        string
+liveend	          string
+
+B. Registrant
+ID	              TYPE	
+eventid	        string
+firstname	      string	
+lastname	      string	
+email	          string	
+company	        string	
+zip	            int	
+city	          string	
+state	          string	
+country	        string
+
+C. Attendee
+ID	              TYPE	
+eventid	        string
+email	          string
+userstatus	    string
+engagementscore	 float	
+liveminutes	     float	
+askedquestions	 float	
+answeredpolls	   float	
+answeredsurveys	 float
+
+D. Survey
+ID	            TYPE	
+eventid	      string
+surveyid	    string	
+surveycode	  string	
+question	    string	
+responses	     int	
+choice1	      float	
+choice2	      float	
+choice3	      float	
+choice4	      float	
+choice5	      float
+
+A public proxy server https://cors-anywhere.herokuapp.com/ is used to handle CORS exception
