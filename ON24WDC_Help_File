@@ -10,7 +10,7 @@ and click on 'Get ON24 Data!' This initiates the connection. Use Chromium to deb
 Steps to use this WDC in Tableau Desktop:
 
 1. Open Tableau Desktop>Connect to data>Web Data Connector
-2. Enter the URL:
+2. Enter the URL: https://ajinkyajosalkar.github.io/on24wdc.html
 3. Enter Client ID, Access Token Key and Access Token Secret and click on 'Get ON24 Data!' button
 4. The tables Event, Attendee, Registrant and Survey would be displayed in the left side pane. You can pull any/all tables and model
 5. You can refresh individual table data using 'Update Now' or simply use 'Refresh All Extracts' option from 'Data' menu
